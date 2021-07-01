@@ -212,3 +212,7 @@ If you are using Ganache to fork a network, then you may have issues with the bl
 - Yearn [Discord channel](https://discord.com/invite/6PNv2nF/)
 - Brownie [Gitter channel](https://gitter.im/eth-brownie/community)
 - Alex The Entreprenerd on [Twitter](https://twitter.com/GalloDaSballo)
+
+
+# Notes
+- Change the defaultBalance to 100000 ether since in the polygonscan gas is measured in matic and the default value of 100 Matic is too low.

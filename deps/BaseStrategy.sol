@@ -44,7 +44,7 @@ abstract contract BaseStrategy is PausableUpgradeable, SettAccessControl {
     event Harvest(uint256 harvested, uint256 indexed blockNumber);
     event Tend(uint256 tended);
 
-    address public want; // Want: Curve.fi renBTC/wBTC (crvRenWBTC) LP token
+    address public want; // Want: Quickswap WBTC/USDC  LP token
 
     uint256 public performanceFeeGovernance;
     uint256 public performanceFeeStrategist;

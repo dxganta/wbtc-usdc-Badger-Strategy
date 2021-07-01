@@ -12,6 +12,7 @@ from config.StrategyResolver import (
 
 console = Console()
 
+
 class SnapshotManager:
     def __init__(self, sett, strategy, controller, key):
         self.key = key
@@ -206,7 +207,8 @@ class SnapshotManager:
     def printPermissions(self):
         # Accounts
         table = []
-        console.print("[blue]=== Permissions: {} Sett ===[/blue]".format(self.key))
+        console.print(
+            "[blue]=== Permissions: {} Sett ===[/blue]".format(self.key))
 
         table.append(["sett.keeper", self.sett.keeper()])
         table.append(["sett.governance", self.sett.governance()])
@@ -224,9 +226,11 @@ class SnapshotManager:
 
     def printBasics(self, snap: Snap):
         table = []
-        console.print("[green]=== Status Report: {} Sett ===[green]".format(self.key))
+        console.print(
+            "[green]=== Status Report: {} Sett ===[green]".format(self.key))
 
-        table.append(["sett.pricePerFullShare", snap.get("sett.pricePerFullShare")])
+        table.append(["sett.pricePerFullShare",
+                      snap.get("sett.pricePerFullShare")])
         table.append(["strategy.want", snap.balances("want", "strategy")])
 
         print(tabulate(table, headers=["metric", "value"]))
@@ -234,7 +238,8 @@ class SnapshotManager:
     def printTable(self, snap: Snap):
         # Numerical Data
         table = []
-        console.print("[green]=== Status Report: {} Sett ===[green]".format(self.key))
+        console.print(
+            "[green]=== Status Report: {} Sett ===[green]".format(self.key))
 
         for key, item in snap.data.items():
             # Don't display 0 balances:
