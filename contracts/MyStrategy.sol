@@ -82,9 +82,7 @@ contract MyStrategy is BaseStrategy {
 
     /// @dev Balance of want currently held in strategy positions
     function balanceOfPool() public override view returns (uint256) {
-        return IStakingRewards(STAKING_REWARDS).balanceOf(address(this))
-        .add(balanceOfToken(usdc))
-        .add(balanceOfToken(wbtc));
+        return IStakingRewards(STAKING_REWARDS).balanceOf(address(this));
     }
 
     function balanceOfToken(address _token) public view returns (uint256) {
@@ -239,7 +237,7 @@ contract MyStrategy is BaseStrategy {
         uint256 _wbtcIn = balanceOfToken(wbtc);
         uint256 _usdcIn = balanceOfToken(usdc);
         // add to WBTC-USDC LP pool for pool tokens
-        IUniswapRouterV2(QUICKSWAP_ROUTER).addLiquidity(wbtc, usdc, _wbtcIn, _usdcIn, _wbtcIn.mul(sl).div(1000), _wbtcIn.mul(sl).div(1000), address(this), now);
+        IUniswapRouterV2(QUICKSWAP_ROUTER).addLiquidity(wbtc, usdc, _wbtcIn, _usdcIn, _wbtcIn.mul(sl).div(1000), _usdcIn.mul(sl).div(1000), address(this), now);
     }   
 
     function setSlippageTolerance(uint256 _s) external {
