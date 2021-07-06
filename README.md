@@ -2,11 +2,11 @@
 
 This mix is configured for use with [Ganache](https://github.com/trufflesuite/ganache-cli) on a [forked mainnet](https://eth-brownie.readthedocs.io/en/stable/network-management.html#using-a-forked-development-network).
 
-<img src="https://user-images.githubusercontent.com/47485188/124500366-4203fa80-dddd-11eb-928c-219f8c36e691.png"> </img>
+<img src="https://user-images.githubusercontent.com/47485188/124619284-23ae0580-de96-11eb-9c64-088af0b219e6.png"> </img>
 
 ## How it Works
 ### Deposit
-The Strategy takes Quickswap's Quick-v2 WBTC-USDC Liquidity Pool tokens as deposit and stakes them for yield generation. You can get Quick-v2 WBTC-USDC tokens [here]
+The Strategy takes Quickswap's Quick-v2 WBTC-USDC Liquidity Pool tokens as deposit and stakes them on Quickswap for yield generation. You can get Quick-v2 WBTC-USDC tokens [here](https://quickswap.exchange/#/add/0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174)
 ### Harvest & Compounding
 Including the APY from providing liquidity in the WBTC-USDC pool, the user also gets QUICK rewards for staking the WBTC-USDC LP tokens.
 
@@ -20,7 +20,7 @@ On withdraw call, the strategy simply unstakes the WBTC-USDC tokens and returns 
 
 As of July 5, 2021
 
-Rewards -> (20 Quick Per day) 9.71% APY <br>
+Rewards -> 9.71% APY <br>
 Fees -> 10.77% APY
 
 Total -> <strong>20.48% APY</strong>

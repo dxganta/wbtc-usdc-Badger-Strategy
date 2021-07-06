@@ -130,14 +130,14 @@ contract MyStrategy is BaseStrategy {
 
     /// @dev utility function to withdraw everything for migration
     function _withdrawAll() internal override {
-        uint256 _totalWant = IStakingRewards(STAKING_REWARDS).balanceOf(address(this));
+        uint256 _totalWant = balanceOfPool();
         if (_totalWant > 0) {
         _withdrawSome(_totalWant);
         }
     }
     /// @dev withdraw the specified amount of want, liquidate from lpComponent to want, paying off any necessary debt for the conversion
     function _withdrawSome(uint256 _amount) internal override returns (uint256) {
-        uint256 _totalWant = IStakingRewards(STAKING_REWARDS).balanceOf(address(this));
+        uint256 _totalWant = balanceOfPool();
         if (_amount > _totalWant) {
             _amount = _totalWant;
         }
