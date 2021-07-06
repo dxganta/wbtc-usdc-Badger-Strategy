@@ -24,3 +24,16 @@ Rewards -> 9.71% APY <br>
 Fees -> 10.77% APY
 
 Total -> <strong>20.48% APY</strong>
+
+## Notes
+1. Add Polygon to your local brownie networks
+```
+brownie networks import network-config.yaml
+```
+2. Increase the default balance of an account (since we are dealing with Matic here)
+```
+brownie networks modify polygon-main-fork default_balance="1000000 ether"
+```
+
+## Tests
+<img src="https://user-images.githubusercontent.com/47485188/124650917-e8bcc980-deb7-11eb-9344-c25a3c4d2f6d.png"> </img>
