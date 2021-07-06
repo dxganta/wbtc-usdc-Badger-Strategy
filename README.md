@@ -18,12 +18,12 @@ On withdraw call, the strategy simply unstakes the WBTC-USDC tokens and returns 
 
 ## [Expected Yield](https://quickswap.exchange/#/quick)
 
-As of July 5, 2021
+As of July 7, 2021
 
-Rewards -> 9.71% APY <br>
-Fees -> 10.77% APY
+Rewards -> 11.15% APY <br>
+Fees -> 13.97% APY
 
-Total -> <strong>20.48% APY</strong>
+Total -> <strong>25.12% APY</strong>
 
 ## Notes
 1. Add Polygon to your local brownie networks
@@ -34,6 +34,8 @@ brownie networks import network-config.yaml
 ```
 brownie networks modify polygon-main-fork default_balance="1000000 ether"
 ```
+
+3. In the .env file put the ETHERSCAN_TOKEN value as the API key from Polygonscan (not etherscan).
 
 ## Tests
 <img src="https://user-images.githubusercontent.com/47485188/124650917-e8bcc980-deb7-11eb-9344-c25a3c4d2f6d.png"> </img>
